@@ -16,18 +16,18 @@ class Quiz {
     });
   }
 
-  async start(){
-    if(gameState === 0){
+   start(){
+    //if(gameState === 0){
       contestant = new Contestant();
-      var contestantCountRef = await database.ref('contestantCount').once("value");
-      if(contestantCountRef.exists()){
+    //  var contestantCountRef = await database.ref('contestantCount').once("value");
+     // if(contestantCountRef.exists()){
         
-        contestantCount = contestantCountRef.val();
+       // contestantCount = contestantCountRef.val();
         contestant.getCount();
-      }
+      
       question = new Question()
       question.display();
-    }
+    
   }
 
   play(){
@@ -47,9 +47,7 @@ class Quiz {
       textSize(20);
       text("*NOTA: ¡Los participantes que respondieron correctamente están resaltados en color verde!",20,230);
 
-      for(var plr in allContestants){
-        debugger;
-        var correctAns = "2";
+  
 // Marca la condición cuando la respuesta del jugador y la respuesta correcta son iguales
 for (var plr in allContestants) {
   debugger;
@@ -63,7 +61,7 @@ if (correctAns ===
 else
 fill ("Red");
 
-}
+
 
         display_Answers+=30;
         textSize(20);

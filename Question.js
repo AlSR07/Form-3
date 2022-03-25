@@ -39,7 +39,7 @@ class Question {
     this.input1.position(150, 230);
     this.input2.position(350, 230);
     this.button.position(290, 300);
-    this.button2.position(360, 300);
+   // this.button2.position(360, 300);
 
     this.button.mousePressed(()=>{
       this.title.hide();
@@ -54,11 +54,11 @@ class Question {
       contestant.updateCount(contestantCount);
     });
 
-    this.button2.mousePressed(()=>{
-      contestant.updateCount(0)
-      quiz.update(0)
-      var ref = database.ref("contestants")
-      ref.remove()
-    })
+   // this.button2.mousePressed(()=>{
+   //   contestant.updateCount(0)
+   //   quiz.update(0)
+   //   var ref = database.ref("contestants")
+   //   ref.remove()
+   // })
   }
 }
